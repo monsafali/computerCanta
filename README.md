@@ -77,7 +77,8 @@ FRONTEND_URL=http://localhost:5173
 Create a `.env` file inside the `frontend` directory:
 
 ```
-VITE_API_URL=http://localhost:5001```
+VITE_API_URL=http://localhost:5001
+```
 
 
 ---
