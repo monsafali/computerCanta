@@ -51,6 +51,7 @@ export default function stampTemplate(myData) {
        padding: 20px;
        width: 1100px;
        height: 679px;
+
    }
 
    /* Header */
@@ -765,13 +766,13 @@ export default function stampTemplate(myData) {
     <!-- time user auto  -->
     <div class="box">
       <p class="time">${GrossTime}</p>
-      <p class="date">${Date}</p>
+      <p class="date">${GrossDate}</p>
       <p class="status">Auto</p>
     </div>
     <!-- user time plus -->
     <div class="box2">
      <p class="time2">${TareTime}</p>
-      <p class="date2">${Date}</p>
+      <p class="date2">${TareDate}</p>
       <p class="status2">Manual</p>
     </div>
     <!-- netweight -->

@@ -1,12 +1,26 @@
 import axios from "axios";
 const API = import.meta.env.VITE_API_URL
 
+
+
+export const getsr = async () => {
+  const response = await axios.get(
+    `${API}/api/v1/sr`
+  );
+
+  return response.data;
+};
+
+
 export const generateStamp = async (data) => {
   const response = await axios.post(`${API}/api/v1/generate`, data, {
     responseType: "blob",
   });
   return response.data;
 };
+
+
+
 
 
 export const searchStamp = async (Sr_No) => {
@@ -20,11 +34,17 @@ export const searchStamp = async (Sr_No) => {
 };
 
 
+
 export const downloadReport = async (fromDate, toDate) => {
   const response = await axios.post(
     `${API}/api/v1/searchDate`,
-    { fromDate, toDate },
-    { responseType: "blob" }
+    {
+      fromDate,
+      toDate,
+    },
+    {
+      responseType: "blob",
+    }
   );
 
   return response.data;

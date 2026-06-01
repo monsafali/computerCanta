@@ -60,14 +60,14 @@ const generateStampData = (data) => {
      const formatDate = (d) =>
         `${String(d.getDate()).padStart(2, "0")}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getFullYear()).slice(-2)}`;
 
-
+ const formatDate2 = (d) =>
+  `${d.getMonth() + 1}/${d.getDate()}/${d.getFullYear()}`;
   return {
     ...data,
 
-    Date: formatDate(now),
+Date: formatDate(now),
     formDate: formatDate(now),
     GrossDate: formatDate2(now),
-
     TareDate: formatDate2(now),
 
     GrossTime: formatTime(now),
