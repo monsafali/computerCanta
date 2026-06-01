@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="bg-gray-800 text-gray p-4 flex gap-6">
+    <nav className="bg-gray-800 text-white p-4 flex gap-6">
       <Link to="/" className="hover:underline">
         Create Stamp
       </Link>
@@ -12,7 +12,11 @@ export default function Navbar() {
       </Link>
 
       <Link to="/report" className="hover:underline">
-        Date Report
+         Report
+      </Link>
+
+         <Link to="/delete" className="hover:underline">
+        Delete Product
       </Link>
     </nav>
   );

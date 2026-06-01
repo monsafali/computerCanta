@@ -336,3 +336,32 @@ export const SearchDate = async (req, res) => {
     });
   }
 };
+
+
+export const deleteProduct = async (req, res) => {
+  try {
+    const { SrNo } = req.params;
+    console.log("Deleting product with SrNo:", SrNo);
+
+
+       const deleted = await Product.findOneAndDelete({
+      Sr_No: Number(SrNo),
+    });
+
+    if (!deleted) {
+      return res.status(404).json({
+        message: "Product not found",
+      });
+    }
+
+    res.json({
+      message: "Product deleted successfully",
+    });
+  } catch (error) {
+    console.error(error);
+
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};

@@ -49,3 +49,13 @@ export const downloadReport = async (fromDate, toDate) => {
 
   return response.data;
 };
+
+
+
+export const deleteProduct = async (SrNo) => {
+  const response = await axios.delete(
+    `${API}/api/v1/product/${SrNo}`
+  );
+
+  return response.data;
+};
